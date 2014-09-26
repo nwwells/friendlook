@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]>      <html class="no-js ie-old"> <![endif]-->
+<!--[if gt  IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>friendlook</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="shortcut icon" href="images/friendbook.ico">
+		<link href="lib/gestalt/all.css" rel="stylesheet" type="text/css">
+		<link href="vendor/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<!-- load the facebook code, hacky-style -->
+		<script>
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '327697180744153',
+					xfbml      : true,
+					version    : 'v2.1'
+				});
+			};
+
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+		<!-- end facebook code -->
+
+		<!--[if lte IE 9]>
+			<p class="old-browser-warning">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<!-- <header id="site-header"></header> -->
+		<nav id="sidebar"></nav>
+		<div class="main-container">
+			<main id="main"></main>
+		</div>
+		<script src="vendor/es5-shim.min.js"></script>
+		<script src="lib/shim/our-shim.js"></script>
+		<script data-main="/config.js" src="vendor/require-2.1.10.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				require(['Friendlook.js'], function(app) {
+					app.start();
+				})
+			});
+		</script>
+	</body>
+</html>

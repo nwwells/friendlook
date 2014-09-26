@@ -1,0 +1,48 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#sidebar {
+  position: absolute;
+  width: 13rem;
+  top: 0rem;
+  bottom: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  position: absolute;
+  top: 0rem;
+  left: 13rem;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#main {
+  overflow: auto;
+  width: 60rem;
+  margin: auto;
+  padding: 2rem 0;
+}
+.push-up--small {
+  margin-top: .5rem;
+}
+.push-up--medium {
+  margin-top: 1rem;
+}
+.pad-left--xlarge {
+  padding-left: 1.5rem;
+}
+.pad-sides--xlarge {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.block {
+  display: block;
+}

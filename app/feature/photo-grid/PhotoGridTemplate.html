@@ -1,0 +1,9 @@
+<div data-bind="if: status() !== 'connected'">
+	<fb:login-button scope="user_photos" onlogin="checkLoginState();"></fb:login-button>
+</div>
+<div data-bind="if: status() === 'connected'">
+	<h1>Photos:</h1>
+	<!-- ko foreach: photos -->
+		<img data-bind="attr: {src: source}"></img>
+	<!-- /ko -->
+</div>

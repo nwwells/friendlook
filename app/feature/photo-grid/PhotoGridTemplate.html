@@ -4,7 +4,7 @@
 <div data-bind="if: status() === 'connected'">
 	<h1>Photos:</h1>
 	<div data-class="packery-container" data-bind="foreach: photos">
-		<div data-class="packery-item" data-bind="
+		<div class="bkg-fit" data-class="packery-item" data-bind="
 			style: {
 				'background-image': 'url(' + source() + ')',
 				width:  $parent.getItemWidth(),

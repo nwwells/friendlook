@@ -4,6 +4,7 @@ define(function (require) {
 	var Controller = require('lib/navigation/Controller');
 	var render = require('lib/render/Render');
 	var photoGridTemplate = require('text!feature/photo-grid/PhotoGridTemplate.html');
+	require('css!feature/photo-grid/PhotoGridStyle.css');
 	var photoGridViewModel = require('feature/photo-grid/PhotoGridViewModel');
 
 	return new Controller({

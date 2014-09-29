@@ -92,9 +92,6 @@ ul,
 li {
   margin: 0;
 }
-body {
-  font-family: 'Proxima Nova';
-}
 h1 {
   font-size: 2rem;
 }
@@ -118,4 +115,7 @@ table {
 }
 body {
   line-height: 1;
+}
+* {
+  background-size: cover;
 }

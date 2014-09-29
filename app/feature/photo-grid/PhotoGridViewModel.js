@@ -3,6 +3,7 @@ define(function (require) {
 
 	var ko = require('knockout');
 	var mapping = require('knockout.mapping');
+	var Packery = require('packery');
 
 	var photoGridViewModel = {
 		status: ko.observable(''),
@@ -12,6 +13,12 @@ define(function (require) {
 	var handleGraphResponse = function (resp) {
 		console.log(resp);
 		mapping.fromJS(resp.data, photoGridViewModel.photos);
+		var container = document.querySelector('[data-class="packery-container"]');
+		var packery = new Packery(container, {
+			itemSelector: '[data-class="packery-item"]',
+			columnWidth: 288,
+			gutter: 10
+		});
 	};
 
 	var statusChangeCallback = function (response) {
@@ -24,7 +31,7 @@ define(function (require) {
 		window.FB.getLoginStatus(statusChangeCallback);
 	};
 
-	var ITEM_WIDTH = 320;
+	var ITEM_WIDTH = 288;
 	photoGridViewModel.getItemWidth = function (item) {
 		return ITEM_WIDTH + 'px';
 	};

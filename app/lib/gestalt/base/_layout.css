@@ -8,11 +8,12 @@ body {
   height: 100%;
 }
 #sidebar {
-  position: absolute;
-  width: 0;
-  top: 0rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
   bottom: 0;
   box-sizing: border-box;
+  background: linear-gradient(127deg, #7fc4a2, #5d4822);
 }
 .main-container {
   position: absolute;

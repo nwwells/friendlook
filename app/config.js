@@ -16,6 +16,7 @@
 			'knockout': 'vendor/knockout-3.0.0',
 			'knockout.mapping': 'vendor/knockout.mapping.latest',
 			'markdownConverter': 'vendor/markdown/marked',
+			'packery': 'vendor/packery.pkgd-1.2.4',
 
 			// requirejs plugins:
 			'mdown': 'vendor/markdown/mdown',

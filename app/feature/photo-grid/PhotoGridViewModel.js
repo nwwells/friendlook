@@ -24,6 +24,17 @@ define(function (require) {
 		window.FB.getLoginStatus(statusChangeCallback);
 	};
 
+	var ITEM_WIDTH = 320;
+	photoGridViewModel.getItemWidth = function (item) {
+		return ITEM_WIDTH + 'px';
+	};
+
+	photoGridViewModel.getItemHeight = function (item) {
+		var height = item.height(), width = item.width();
+		var ratio = width / ITEM_WIDTH;
+		return (height / ratio) + 'px';
+	};
+
 	//normally I'd return a class, but this needs to be a singleton.
 	return photoGridViewModel;
 });

@@ -9,7 +9,7 @@ body {
 }
 #sidebar {
   position: absolute;
-  width: 13rem;
+  width: 0;
   top: 0rem;
   bottom: 0;
   box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
 .main-container {
   position: absolute;
   top: 0rem;
-  left: 13rem;
+  left: 0;
   right: 0;
   bottom: 0;
   box-sizing: border-box;
@@ -26,9 +26,8 @@ body {
 }
 #main {
   overflow: auto;
-  width: 60rem;
   margin: auto;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 .push-up--small {
   margin-top: .5rem;
